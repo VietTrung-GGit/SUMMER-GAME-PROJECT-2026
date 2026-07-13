@@ -6,9 +6,9 @@ public class AdSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject gameCanvas;
     [SerializeField] private float maxSpawnInterval = 2.0f;
-    [SerializeField] private GoodAdBuilder goodAdBuilder;
-    [SerializeField] private BadAdBuilder badAdBuilder;
-    [SerializeField] private ModifierAdBuilder modifierAdBuilder;
+    [SerializeField] private AdBuilder goodAdBuilder;
+    [SerializeField] private AdBuilder badAdBuilder;
+    [SerializeField] private AdBuilder modifierAdBuilder;
     private float spawnTimeRemaining;
     private float screenWidth;
     private float screenHeight;
@@ -87,7 +87,7 @@ public class AdSpawner : MonoBehaviour
         }
     }
 
-    private void ConstructAd(IAdBuilder builder, Ad targetAd)
+    private void ConstructAd(AdBuilder builder, Ad targetAd)
     {
         builder.BuildTitleIcon(targetAd);
         builder.BuildActionIcon(targetAd);
