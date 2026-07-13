@@ -1,12 +1,12 @@
 using System;
 using UnityEngine;
 
-public class StatFixedUpdate : MonoBehaviour
+public class PerformanceFixedUpdate : MonoBehaviour
 {
     [SerializeField] private float intervalMax;
     [SerializeField] private float animationSpeed = 5.0f;
     [SerializeField] private double fixedIncrement = 1;
-    [SerializeField] private StatTracker statTracker;
+    [SerializeField] private StatTracker performanceTracker;
     private float intervalRemaining;
     private double targetCount = 0;
     private const double STAT_MAX_VALUE = 999999999999;
@@ -24,19 +24,19 @@ public class StatFixedUpdate : MonoBehaviour
             intervalRemaining = intervalMax;
         }
 
-        if (Math.Abs(targetCount - statTracker.StatCount) > 0.05f)
+        if (Math.Abs(targetCount - performanceTracker.StatCount) > 0.05f)
         {
-            statTracker.StatCount += (targetCount - statTracker.StatCount)*animationSpeed*Time.deltaTime;
+            performanceTracker.StatCount += (targetCount - performanceTracker.StatCount)*animationSpeed*Time.deltaTime;
         }
-        else if (!Double.Equals(statTracker.StatCount, targetCount))
+        else if (!Double.Equals(performanceTracker.StatCount, targetCount))
         {
-            statTracker.StatCount = targetCount;
+            performanceTracker.StatCount = targetCount;
         }
     }
 
     public void UpdateStatCount(double increment)
     {
-        targetCount = statTracker.StatCount + increment;
+        targetCount = performanceTracker.StatCount + increment;
         if (targetCount > STAT_MAX_VALUE)
         {
             targetCount = STAT_MAX_VALUE;

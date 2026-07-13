@@ -6,8 +6,7 @@ public class BalanceCount : MonoBehaviour
     [SerializeField] private float intervalMax;
     [SerializeField] private float animationSpeed = 5.0f;
     [SerializeField] private double fixedIncrement = 1;
-    //[SerializeField] private double currentCount = 1000000;
-    [SerializeField] private BalanceTracker balanceTracker;
+    [SerializeField] private StatTracker balanceTracker;
     private float intervalRemaining;
     private double targetCount = 1000000;
     private const double BALANCE_MAX_VALUE = 999999999;
@@ -25,18 +24,18 @@ public class BalanceCount : MonoBehaviour
             intervalRemaining = intervalMax;
         }
 
-        if (Math.Abs(targetCount - balanceTracker.Balance) > 0.05f)
+        if (Math.Abs(targetCount - balanceTracker.StatCount) > 0.05f)
         {
-            balanceTracker.Balance += (targetCount - balanceTracker.Balance)*animationSpeed*Time.deltaTime;
+            balanceTracker.StatCount += (targetCount - balanceTracker.StatCount)*animationSpeed*Time.deltaTime;
         }
-        else if (!Double.Equals(balanceTracker.Balance, targetCount))
+        else if (!Double.Equals(balanceTracker.StatCount, targetCount))
         {
-            balanceTracker.Balance = targetCount;
+            balanceTracker.StatCount = targetCount;
         }
     }
     public void UpdateBalanceCount(double increment)
     {
-        targetCount = balanceTracker.Balance + increment;
+        targetCount = balanceTracker.StatCount + increment;
         if (targetCount > BALANCE_MAX_VALUE)
         {
             targetCount = BALANCE_MAX_VALUE;

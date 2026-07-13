@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d02ee014ff0d5de4ca6a04a2ee6a5e22, type: 3}
+  m_Name: DecreaseBalance
+  m_EditorClassIdentifier: Assembly-CSharp::DecreaseBalanceAction
+  viewTracker: {fileID: 11400000, guid: 9eee0a8803dace64cb7255e6da1342ef, type: 2}
+  balanceTracker: {fileID: 11400000, guid: cee9dac98e5c7c2458666410e6090b17, type: 2}

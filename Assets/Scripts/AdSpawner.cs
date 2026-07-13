@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class AdSpawner : MonoBehaviour
@@ -91,5 +92,6 @@ public class AdSpawner : MonoBehaviour
     {
         builder.BuildTitleIcon(targetAd);
         builder.BuildActionIcon(targetAd);
+        builder.BuildConfirmAction(targetAd);
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -17,10 +18,10 @@ public class Ad : MonoBehaviour
         actionIcon.sprite = newIcon;
     }
 
-    public void SetConfirmAction(UnityAction action)
+    public void SetConfirmAction(Action<double> action, double amount)
     {
         confirmButton.onClick.RemoveAllListeners();
-        confirmButton.onClick.AddListener(action);
+        confirmButton.onClick.AddListener(() => action?.Invoke(amount));
     }
 
     private void OnDisable()

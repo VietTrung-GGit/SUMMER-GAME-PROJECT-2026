@@ -5,7 +5,7 @@ using System;
 [RequireComponent(typeof(TMP_Text))]
 public class UIBalanceText : MonoBehaviour
 {
-    [SerializeField] private BalanceTracker balanceTracker;
+    [SerializeField] private StatTracker balanceTracker;
     private TMP_Text balanceText;
     //Prevent garbage strings
     private string lastDisplayedString = "";
@@ -17,12 +17,12 @@ public class UIBalanceText : MonoBehaviour
 
     private void OnEnable()
     {
-        balanceTracker.OnBalanceChanged += UpdateTextDisplay;
+        balanceTracker.OnStatCountChanged += UpdateTextDisplay;
     }
 
     private void OnDisable()
     {
-        balanceTracker.OnBalanceChanged -= UpdateTextDisplay;
+        balanceTracker.OnStatCountChanged -= UpdateTextDisplay;
     }
 
     private void UpdateTextDisplay(double count)

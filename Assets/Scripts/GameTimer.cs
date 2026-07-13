@@ -3,28 +3,35 @@ using UnityEngine.UI;
 
 public class GameTimer : MonoBehaviour
 {
-    [SerializeField] private float timeMax = 30.0f;
+    [SerializeField] private StatTracker gameTimeTracker;
     [SerializeField] private Slider timerSlider;
-    private float timeRemaining;
     private void Awake()
     {
-        timeRemaining = timeMax;
-        timerSlider.value = timeMax;
+        timerSlider.value = (float)gameTimeTracker.StatCount;
+    }
+
+    private void OnEnable()
+    {
+        gameTimeTracker.OnStatCountChanged += UpdateTimeSlider;
+    }
+    private void OnDisable()
+    {
+        gameTimeTracker.OnStatCountChanged -= UpdateTimeSlider;
     }
     private void Update()
     {
-        timeRemaining -= Time.deltaTime;
-        if (timerSlider)
-        {
-            timerSlider.value = timeRemaining;
-        }
+        gameTimeTracker.StatCount -= Time.deltaTime;
         
-        if (timeRemaining <= 0.0f)
+        if (gameTimeTracker.StatCount <= 0.0f)
         {
             OnTimerExpire();
         }
     }
 
+    private void UpdateTimeSlider(double amount)
+    {
+        timerSlider.value = (float)amount;
+    }
     private void OnTimerExpire()
     {
         Time.timeScale = 0.0f;

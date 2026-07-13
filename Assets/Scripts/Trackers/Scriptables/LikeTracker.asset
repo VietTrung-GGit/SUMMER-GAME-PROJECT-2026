@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71eb34fba72c9c54198e9163953caedb, type: 3}
-  m_Name: LikeStatTracker
+  m_Name: LikeTracker
   m_EditorClassIdentifier: Assembly-CSharp::StatTracker
   statCount: 0

@@ -3,9 +3,9 @@ using TMPro;
 using System;
 
 [RequireComponent(typeof(TMP_Text))]
-public class UIStatText : MonoBehaviour
+public class UIPerformanceText : MonoBehaviour
 {
-    [SerializeField] private StatTracker statTracker;
+    [SerializeField] private StatTracker performanceTracker;
     private TMP_Text statCountText;
     //Prevent garbage strings
     private string lastDisplayedString = "";
@@ -18,12 +18,12 @@ public class UIStatText : MonoBehaviour
 
     private void OnEnable()
     {
-        statTracker.OnStatCountChanged += UpdateTextDisplay;
+        performanceTracker.OnStatCountChanged += UpdateTextDisplay;
     }
 
     private void OnDisable()
     {
-        statTracker.OnStatCountChanged -= UpdateTextDisplay;
+        performanceTracker.OnStatCountChanged -= UpdateTextDisplay;
     }
 
     private void UpdateTextDisplay(double count)
