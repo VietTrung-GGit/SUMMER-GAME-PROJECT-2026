@@ -4,8 +4,8 @@ using UnityEngine.UI;
 public class AdTimer : MonoBehaviour
 {
     [SerializeField] private float timeMax = 5.0f;
-    private float timeRemaining;
     [SerializeField] private Slider timerSlider;
+    private float timeRemaining;
     private void Awake()
     {
         timeRemaining = timeMax;
