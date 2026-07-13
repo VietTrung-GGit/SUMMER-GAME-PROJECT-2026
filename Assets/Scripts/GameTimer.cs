@@ -1,9 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class AdTimer : MonoBehaviour
+public class GameTimer : MonoBehaviour
 {
-    [SerializeField] private float timeMax = 5.0f;
+    [SerializeField] private float timeMax = 30.0f;
     private float timeRemaining;
     [SerializeField] private Slider timerSlider;
     private void Awake()
@@ -27,11 +27,6 @@ public class AdTimer : MonoBehaviour
 
     private void OnTimerExpire()
     {
-        gameObject.SetActive(false);
-    }
-
-    private void OnDisable()
-    {
-        timeRemaining = timeMax;
+        Time.timeScale = 0.0f;
     }
 }
