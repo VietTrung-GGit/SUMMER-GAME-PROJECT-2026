@@ -7,9 +7,13 @@ public class AdItem : ScriptableObject
 {
     [SerializeField] private Image icon;
     [SerializeField] private double value;
-    [SerializeField] private List<AdAction> actionList;
+    [SerializeField] private AdAction action;
     [SerializeField] private StatTracker priceModifierTracker;
+    [SerializeField] private ViewValue viewValue;
+    [SerializeField] private LikeValue likeValue;
     public Sprite AdItemIcon => icon.sprite;
     public double AdItemValue => value * priceModifierTracker.StatCount;
-    public List<AdAction> AdItemActionList => actionList;
+    public AdAction AdItemAction => action;
+    public ViewValue AdItemViewValue => viewValue;
+    public LikeValue AdItemLikeValue => likeValue;
 }

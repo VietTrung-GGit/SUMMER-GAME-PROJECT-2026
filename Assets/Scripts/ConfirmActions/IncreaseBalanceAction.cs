@@ -5,6 +5,6 @@ public class IncreaseBalanceAction : BalanceConfirmAction
     public override void ExecuteAction(double amount)
     {
         balanceTracker.StatCount += amount;
-        viewTracker.StatCount -= amount;
+        //viewTracker.StatCount -= amount;
     }
 }

@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class Ad : MonoBehaviour
@@ -18,7 +17,8 @@ public class Ad : MonoBehaviour
         actionIcon.sprite = newIcon;
     }
 
-    public void SetConfirmAction(Action<double> action, double amount)
+    //Generic type T is used for double, ViewValue and LikeValue in concrete AdBuilder
+    public void SetConfirmAction<T>(Action<T> action, T amount)
     {
         confirmButton.onClick.RemoveAllListeners();
         confirmButton.onClick.AddListener(() => action?.Invoke(amount));

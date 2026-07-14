@@ -4,7 +4,7 @@ public class IncreaseTimeAction : TimeConfirmAction
 {
     public override void ExecuteAction(double amount)
     {
-        viewTracker.StatCount += amount;
+        //viewTracker.StatCount += amount;
         gameTimerTracker.StatCount += amount;
     }
 }

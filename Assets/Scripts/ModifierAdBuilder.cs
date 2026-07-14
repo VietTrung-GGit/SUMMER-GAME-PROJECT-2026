@@ -19,8 +19,11 @@ public class ModifierAdBuilder : AdBuilder
     public override void BuildConfirmAction(Ad targetAd)
     {
         int itemIndex = Random.Range(0, adItemPool.Count);
-        List<AdAction> targetActionList = adItemPool[itemIndex].AdItemActionList;
-        int actionIndex = Random.Range(0, targetActionList.Count);
-        targetAd.SetConfirmAction(targetActionList[actionIndex].AdConfirmAction.ExecuteAction, adItemPool[itemIndex].AdItemValue);
+        //List<AdAction> targetActionList = adItemPool[itemIndex].AdItemActionList;
+        //int actionIndex = Random.Range(0, targetActionList.Count);
+        ConfirmAction targetConfirmAction = adItemPool[itemIndex].AdItemAction.AdConfirmAction;
+        targetAd.SetConfirmAction(targetConfirmAction.ExecuteAction, adItemPool[itemIndex].AdItemValue);
+        targetAd.SetConfirmAction(targetConfirmAction.UpdateViewCount, adItemPool[itemIndex].AdItemViewValue);
+        targetAd.SetConfirmAction(targetConfirmAction.UpdateLikeCount, adItemPool[itemIndex].AdItemLikeValue);
     }
 }
