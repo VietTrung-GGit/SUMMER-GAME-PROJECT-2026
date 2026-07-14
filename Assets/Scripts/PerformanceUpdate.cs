@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class PerformanceFixedUpdate : MonoBehaviour
+public class PerformanceUpdate : MonoBehaviour
 {
     [SerializeField] private float intervalMax;
     [SerializeField] private float animationSpeed = 5.0f;
@@ -9,7 +9,7 @@ public class PerformanceFixedUpdate : MonoBehaviour
     [SerializeField] private StatTracker performanceTracker;
     private float intervalRemaining;
     private double targetCount = 0;
-    private const double STAT_MAX_VALUE = 999999999999;
+    //private const double STAT_MAX_VALUE = 999999999999;
     private void Awake()
     {
         intervalRemaining = intervalMax;
@@ -37,10 +37,6 @@ public class PerformanceFixedUpdate : MonoBehaviour
     public void UpdateStatCount(double increment)
     {
         targetCount = performanceTracker.StatCount + increment;
-        if (targetCount > STAT_MAX_VALUE)
-        {
-            targetCount = STAT_MAX_VALUE;
-        }
     }
 
 }

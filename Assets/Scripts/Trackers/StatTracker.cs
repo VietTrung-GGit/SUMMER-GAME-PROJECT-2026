@@ -2,17 +2,25 @@ using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
-[CreateAssetMenu]
+[CreateAssetMenu(fileName = "StatTracker", menuName = "Trackers/StatTracker")]
 public class StatTracker : ScriptableObject
 {
     [SerializeField] private double statCount;
     [SerializeField] private double startStatCount;
+    [SerializeField] private double maxStatCount;
     public double StatCount
     {
         get => statCount;
         set
         {
-            statCount = value;
+            if (value >= maxStatCount)
+            {
+                statCount = maxStatCount;
+            }
+            else
+            {
+                statCount = value;
+            }
             OnStatCountChanged?.Invoke(statCount);
         }
     }

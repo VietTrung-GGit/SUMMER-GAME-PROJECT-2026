@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: ViewTracker
   m_EditorClassIdentifier: Assembly-CSharp::StatTracker
   statCount: 0
+  startStatCount: 0
+  maxStatCount: 999999999999

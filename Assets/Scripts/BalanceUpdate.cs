@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class BalanceCount : MonoBehaviour
+public class BalanceUpdate : MonoBehaviour
 {
     [SerializeField] private float intervalMax;
     [SerializeField] private float animationSpeed = 5.0f;
@@ -9,7 +9,7 @@ public class BalanceCount : MonoBehaviour
     [SerializeField] private StatTracker balanceTracker;
     private float intervalRemaining;
     private double targetCount = 1000000;
-    private const double BALANCE_MAX_VALUE = 999999999;
+    //private const double BALANCE_MAX_VALUE = 999999999;
     private void Awake()
     {
         intervalRemaining = intervalMax;
@@ -36,9 +36,5 @@ public class BalanceCount : MonoBehaviour
     public void UpdateBalanceCount(double increment)
     {
         targetCount = balanceTracker.StatCount + increment;
-        if (targetCount > BALANCE_MAX_VALUE)
-        {
-            targetCount = BALANCE_MAX_VALUE;
-        }
     }
 }

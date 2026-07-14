@@ -1,7 +1,7 @@
 public enum AdActionType
 {
-    BuyProduct,
-    SellProduct,
-    GainTime,
-    LoseTime
+    BuyProduct = 0,
+    SellProduct = 1,
+    GainTime = 2,
+    LoseTime = 3
 }

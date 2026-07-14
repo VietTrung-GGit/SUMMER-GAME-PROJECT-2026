@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71eb34fba72c9c54198e9163953caedb, type: 3}
-  m_Name: LikeTracker
-  m_EditorClassIdentifier: Assembly-CSharp::StatTracker
-  statCount: 0
-  startStatCount: 0
-  maxStatCount: 999999999999
+  m_Script: {fileID: 11500000, guid: 9a558e77e8bfb714293e83a93ad30d40, type: 3}
+  m_Name: PriceModTimeTracker
+  m_EditorClassIdentifier: Assembly-CSharp::TimeTracker
+  timeCount: 8
+  startTimeCount: 8
+  maxTimeCount: 8

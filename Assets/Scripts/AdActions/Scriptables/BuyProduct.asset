@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71eb34fba72c9c54198e9163953caedb, type: 3}
-  m_Name: LikeTracker
-  m_EditorClassIdentifier: Assembly-CSharp::StatTracker
-  statCount: 0
-  startStatCount: 0
-  maxStatCount: 999999999999
+  m_Script: {fileID: 11500000, guid: d70e5d4759bf91a49a55d99f85be1bdc, type: 3}
+  m_Name: BuyProduct
+  m_EditorClassIdentifier: Assembly-CSharp::AdAction
+  icon: {fileID: 0}
+  type: 0

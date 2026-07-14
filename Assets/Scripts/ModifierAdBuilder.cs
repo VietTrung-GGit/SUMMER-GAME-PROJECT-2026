@@ -1,8 +1,11 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ModifierAdBuilder : AdBuilder
 {
     [SerializeField] private Sprite newIcon;
+    [SerializeField] private List<ConfirmAction> confirmActionPool;
+    [SerializeField] private List<AdItem> adItemPool;
     public override void BuildTitleIcon(Ad targetAd)
     {
         targetAd.SetTitleIcon(newIcon);
@@ -15,6 +18,9 @@ public class ModifierAdBuilder : AdBuilder
 
     public override void BuildConfirmAction(Ad targetAd)
     {
-        throw new System.NotImplementedException();
+        int itemIndex = Random.Range(0, adItemPool.Count);
+        List<AdAction> targetActionList = adItemPool[itemIndex].AdItemActionList;
+        int actionIndex = Random.Range(0, targetActionList.Count);
+        targetAd.SetConfirmAction(targetActionList[actionIndex].AdConfirmAction.ExecuteAction, adItemPool[itemIndex].AdItemValue);
     }
 }

@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StatTracker
   statCount: 1000000
   startStatCount: 1000000
+  maxStatCount: 999999999
