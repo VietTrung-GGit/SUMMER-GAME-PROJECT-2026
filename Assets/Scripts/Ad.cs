@@ -20,7 +20,11 @@ public class Ad : MonoBehaviour
     //Generic type T is used for double, ViewValue and LikeValue in concrete AdBuilder
     public void SetConfirmAction<T>(Action<T> action, T amount)
     {
-        confirmButton.onClick.RemoveAllListeners();
+        //Debug.Log("Set Confirm Action!");
+        if (action == null)
+        {
+            Debug.Log("Null found!");
+        }
         confirmButton.onClick.AddListener(() => action?.Invoke(amount));
     }
 

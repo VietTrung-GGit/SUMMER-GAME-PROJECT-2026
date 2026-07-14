@@ -20,7 +20,7 @@ public class AdSpawner : MonoBehaviour
     private const string MODIFIER_AD_KEYWORD = "ModifierAd";
     private readonly Dictionary<string, float> adWeightList = new Dictionary<string, float>()
     {
-        {MODIFIER_AD_KEYWORD, 0.1f},
+        {MODIFIER_AD_KEYWORD, 0.7f},
         {BAD_AD_KEYWORD, 0.3f},
         {GOOD_AD_KEYWORD, 0.6f},
     };

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: BuyProduct
   m_EditorClassIdentifier: Assembly-CSharp::AdAction
   icon: {fileID: 0}
-  type: 0
+  confirmAction: {fileID: 11400000, guid: d6cbab0d2f7bfac46ae6b8292b6ab7f9, type: 2}

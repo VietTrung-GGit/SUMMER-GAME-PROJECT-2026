@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: LoseTime
   m_EditorClassIdentifier: Assembly-CSharp::AdAction
   icon: {fileID: 0}
-  type: 3
+  confirmAction: {fileID: 11400000, guid: 037836e2d51fb3f42af8d52a690e28c7, type: 2}

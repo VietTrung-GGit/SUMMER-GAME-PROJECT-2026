@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: DecreaseBalance
   m_EditorClassIdentifier: Assembly-CSharp::DecreaseBalanceAction
   viewTracker: {fileID: 11400000, guid: 9eee0a8803dace64cb7255e6da1342ef, type: 2}
+  likeTracker: {fileID: 11400000, guid: 920178f3fe521864197035b76240ea10, type: 2}
   balanceTracker: {fileID: 11400000, guid: cee9dac98e5c7c2458666410e6090b17, type: 2}

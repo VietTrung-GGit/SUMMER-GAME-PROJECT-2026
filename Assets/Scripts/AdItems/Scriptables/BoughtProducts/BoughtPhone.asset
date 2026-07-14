@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a68b235167e28a648969e7d56e7376b7, type: 3}
-  m_Name: Time
+  m_Name: BoughtPhone
   m_EditorClassIdentifier: Assembly-CSharp::AdItem
   icon: {fileID: 0}
-  value: 3
-  actionList:
-  - {fileID: 11400000, guid: 68c91b1dcdd9bea4ea03925238774907, type: 2}
-  - {fileID: 11400000, guid: aa7ceef19a3cfe34ba18de0a6e93a51e, type: 2}
+  value: 1000
+  adAction: {fileID: 11400000, guid: 5f1773c1d17432b4ba23a20754ba2a77, type: 2}
   priceModifierTracker: {fileID: 11400000, guid: 0563665029f240646ab690c1cf64c353, type: 2}
+  viewValue: 500
+  likeValue: 200

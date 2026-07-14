@@ -1,5 +1,4 @@
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "StatTracker", menuName = "Trackers/StatTracker")]
@@ -8,6 +7,7 @@ public class StatTracker : ScriptableObject
     [SerializeField] private double statCount;
     [SerializeField] private double startStatCount;
     [SerializeField] private double maxStatCount;
+    [SerializeField] private double minStatCount;
     public double StatCount
     {
         get => statCount;
@@ -16,6 +16,10 @@ public class StatTracker : ScriptableObject
             if (value >= maxStatCount)
             {
                 statCount = maxStatCount;
+            }
+            else if (value <= minStatCount)
+            {
+                statCount = minStatCount;
             }
             else
             {

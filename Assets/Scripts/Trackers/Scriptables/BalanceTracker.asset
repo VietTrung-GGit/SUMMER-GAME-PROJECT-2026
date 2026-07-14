@@ -15,3 +15,4 @@ MonoBehaviour:
   statCount: 1000000
   startStatCount: 1000000
   maxStatCount: 999999999
+  minStatCount: -999999999

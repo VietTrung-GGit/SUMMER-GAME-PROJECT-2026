@@ -4,7 +4,7 @@ using UnityEngine;
 public class ModifierAdBuilder : AdBuilder
 {
     [SerializeField] private Sprite newIcon;
-    [SerializeField] private List<ConfirmAction> confirmActionPool;
+    //[SerializeField] private List<ConfirmAction> confirmActionPool;
     [SerializeField] private List<AdItem> adItemPool;
     public override void BuildTitleIcon(Ad targetAd)
     {

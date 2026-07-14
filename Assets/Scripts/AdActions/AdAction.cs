@@ -6,8 +6,8 @@ public class AdAction : ScriptableObject
 {
     [SerializeField] private Image icon;
     //[SerializeField] private AdActionType type;
-    [SerializeField] private ConfirmAction action;
+    [SerializeField] private ConfirmAction confirmAction;
     public Sprite AdActionIcon => icon.sprite;
     //public AdActionType AdActionEnum => type;
-    public ConfirmAction AdConfirmAction => action;
+    public ConfirmAction AdConfirmAction => confirmAction;
 }

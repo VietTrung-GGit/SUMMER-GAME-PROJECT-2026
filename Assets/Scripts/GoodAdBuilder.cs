@@ -4,7 +4,7 @@ using UnityEngine;
 public class GoodAdBuilder : AdBuilder
 {
     [SerializeField] private Sprite newIcon;
-    [SerializeField] private List<ConfirmAction> confirmActionPool;
+    //[SerializeField] private List<ConfirmAction> confirmActionPool;
     [SerializeField] private List<AdItem> adItemPool;
     /*private const string AD_BUY_PRODUCT_KEYWORD = "AdBuyTime";
     private const string AD_GAIN_TIME_KEYWORD = "AdGainTime";

@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: IncreaseTime
   m_EditorClassIdentifier: Assembly-CSharp::IncreaseTimeAction
   viewTracker: {fileID: 11400000, guid: 9eee0a8803dace64cb7255e6da1342ef, type: 2}
-  gameTimerTracker: {fileID: 11400000, guid: 417e0972e497d5b4c9df50f5a08ea626, type: 2}
+  likeTracker: {fileID: 11400000, guid: 920178f3fe521864197035b76240ea10, type: 2}
+  gameTimeTracker: {fileID: 11400000, guid: a58235b34c166f447ae11850dd268cce, type: 2}

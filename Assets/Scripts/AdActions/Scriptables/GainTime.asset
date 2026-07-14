@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: GainTime
   m_EditorClassIdentifier: Assembly-CSharp::AdAction
   icon: {fileID: 0}
-  type: 2
+  confirmAction: {fileID: 11400000, guid: 187ab33d8f497874a88269759d115126, type: 2}

@@ -20,10 +20,6 @@ public class UIGameTimer : MonoBehaviour
         gameTimeTracker.OnTimeCountChanged -= UpdateTimeSlider;
         gameTimeTracker.OnTimeCountExpired -= OnTimerExpire;
     }
-    private void Update()
-    {
-        gameTimeTracker.TimeCount -= Time.deltaTime;
-    }
 
     private void UpdateTimeSlider(double amount)
     {

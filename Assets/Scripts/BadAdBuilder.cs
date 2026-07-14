@@ -4,7 +4,7 @@ using UnityEngine;
 public class BadAdBuilder : AdBuilder
 {
     [SerializeField] private Sprite newIcon;
-    [SerializeField] private List<ConfirmAction> confirmActionPool;
+    //[SerializeField] private List<ConfirmAction> confirmActionPool;
     [SerializeField] private List<AdItem> adItemPool;
     public override void BuildTitleIcon(Ad targetAd)
     {

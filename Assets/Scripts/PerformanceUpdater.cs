@@ -1,18 +1,21 @@
 using System;
 using UnityEngine;
 
-public class PerformanceUpdate : MonoBehaviour
+public class PerformanceUpdater : MonoBehaviour
 {
     [SerializeField] private float intervalMax;
     [SerializeField] private float animationSpeed = 5.0f;
     [SerializeField] private double fixedIncrement = 1;
     [SerializeField] private StatTracker performanceTracker;
     private float intervalRemaining;
-    private double targetCount = 0;
+    private double trueCount;
+    private double targetCount;
     //private const double STAT_MAX_VALUE = 999999999999;
     private void Awake()
     {
         intervalRemaining = intervalMax;
+        trueCount = performanceTracker.StatCount;
+        targetCount = trueCount;
 
     }
     private void Update()
@@ -24,19 +27,25 @@ public class PerformanceUpdate : MonoBehaviour
             intervalRemaining = intervalMax;
         }
 
-        if (Math.Abs(targetCount - performanceTracker.StatCount) > 0.05f)
+        double difference = targetCount - performanceTracker.StatCount;
+        if (Math.Abs(difference) > 0.05f)
         {
-            performanceTracker.StatCount += (targetCount - performanceTracker.StatCount)*animationSpeed*Time.deltaTime;
+            performanceTracker.StatCount += difference*animationSpeed*Time.deltaTime;
         }
-        else if (!Double.Equals(performanceTracker.StatCount, targetCount))
+        else if (performanceTracker.StatCount != targetCount)
         {
             performanceTracker.StatCount = targetCount;
         }
     }
 
-    public void UpdateStatCount(double increment)
+    public void UpdateStatCount(double amount)
     {
-        targetCount = performanceTracker.StatCount + increment;
+        trueCount += amount;
+        if (trueCount < 0.0f)
+        {
+            trueCount = 0.0f;
+        }
+        targetCount = trueCount;
     }
 
 }

@@ -34,7 +34,7 @@ public class TimeTracker : ScriptableObject
 
     public void ResetTimer()
     {
-        timeCount = startTimeCount;
+        TimeCount = maxTimeCount;
     }
 
     private void OnEnable()
