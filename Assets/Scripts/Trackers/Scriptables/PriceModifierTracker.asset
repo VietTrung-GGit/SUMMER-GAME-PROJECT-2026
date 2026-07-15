@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71eb34fba72c9c54198e9163953caedb, type: 3}
   m_Name: PriceModifierTracker
   m_EditorClassIdentifier: Assembly-CSharp::StatTracker
-  statCount: 1
+  statCount: 0.5
   startStatCount: 1
   maxStatCount: 64
-  minStatCount: 1
+  minStatCount: 0.25
