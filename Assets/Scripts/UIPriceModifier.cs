@@ -14,7 +14,6 @@ public class UIPriceModifier : MonoBehaviour
     private void Awake()
     {
         maxTime = priceModTimeTracker.TimeCount;
-        Debug.Log(priceModifierTracker.StatCount);
         //modifierText.text = "x" + Math.Floor(priceModifierTracker.StatCount).ToString();
     }
     private void OnEnable()
@@ -52,7 +51,6 @@ public class UIPriceModifier : MonoBehaviour
     private void UpdateTextDisplay(double amount)
     {
         //modifierText.text = "x" + Math.Floor(priceModifierTracker.StatCount).ToString();
-        Debug.Log(priceModifierTracker.StatCount);
         if (Math.Abs(priceModifierTracker.StatCount - 1.0f) < 1e-9)
         {
             gameObject.SetActive(false);

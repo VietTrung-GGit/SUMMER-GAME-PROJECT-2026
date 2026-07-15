@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(RectTransform))]
-public class DraggableAd : MonoBehaviour, IBeginDragHandler, IDragHandler
+public class DraggableAd : MonoBehaviour, IBeginDragHandler, IDragHandler, IPointerClickHandler
 {
     private RectTransform rectTransform;
     private Canvas canvas;
@@ -14,6 +14,11 @@ public class DraggableAd : MonoBehaviour, IBeginDragHandler, IDragHandler
 
     }
     public void OnBeginDrag(PointerEventData eventData)
+    {
+        transform.SetAsLastSibling();
+    }
+
+    void IPointerClickHandler.OnPointerClick(PointerEventData eventData)
     {
         transform.SetAsLastSibling();
     }

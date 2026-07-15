@@ -5,8 +5,7 @@ public class HalfPriceAction : ModifierConfirmAction
     public override void ExecuteAction(double amount)
     {
         //viewTracker.StatCount += amount;
-        modifierTracker.StatCount /= amount;
-        Debug.Log("Mod divided!");
+        modifierTracker.StatCount /= amount;        
     }
 
     public override void UpdateViewCount(ViewValue viewValue)

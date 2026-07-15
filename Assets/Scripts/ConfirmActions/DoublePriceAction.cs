@@ -6,7 +6,6 @@ public class DoublePriceAction : ModifierConfirmAction
     {
         //viewTracker.StatCount += amount;
         modifierTracker.StatCount *= amount;
-        Debug.Log("Mod multiplied!");
     }
     public override void UpdateViewCount(ViewValue viewValue)
     {
