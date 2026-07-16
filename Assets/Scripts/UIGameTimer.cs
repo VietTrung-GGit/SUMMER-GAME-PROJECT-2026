@@ -27,6 +27,6 @@ public class UIGameTimer : MonoBehaviour
     }
     private void OnTimerExpire()
     {
-        Time.timeScale = 0.0f;
+        timerSlider.value = 0.0f;
     }
 }

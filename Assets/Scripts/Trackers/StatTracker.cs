@@ -26,10 +26,16 @@ public class StatTracker : ScriptableObject
                 statCount = value;
             }
             OnStatCountChanged?.Invoke(statCount);
+
+            if (statCount < 0.0f)
+            {
+                OnNegativeStatCount?.Invoke();
+            }
         }
     }
 
     public event Action<double> OnStatCountChanged;
+    public event Action OnNegativeStatCount;
 
     private void OnEnable()
     {

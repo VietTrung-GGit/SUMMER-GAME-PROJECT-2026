@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a558e77e8bfb714293e83a93ad30d40, type: 3}
-  m_Name: GameTimeTracker
-  m_EditorClassIdentifier: Assembly-CSharp::TimeTracker
-  timeCount: -0.001779759768396616
-  startTimeCount: 60
-  maxTimeCount: 60
+  m_Script: {fileID: 11500000, guid: 71eb34fba72c9c54198e9163953caedb, type: 3}
+  m_Name: SpeedModifierTracker
+  m_EditorClassIdentifier: Assembly-CSharp::StatTracker
+  statCount: 1
+  startStatCount: 1
+  maxStatCount: 8
+  minStatCount: 1
