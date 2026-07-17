@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d70e5d4759bf91a49a55d99f85be1bdc, type: 3}
+  m_Name: BombMetadata
+  m_EditorClassIdentifier: Assembly-CSharp::AdAction
+  icon: {fileID: 0}
+  confirmAction: {fileID: 11400000, guid: f2d8e2902d3c89143bd0d6ea9d405a10, type: 2}
+  closeAction: {fileID: 11400000, guid: f2514677caa470a4b874a5cf0ccd1baa, type: 2}
+  timerAction: {fileID: 11400000, guid: f2d8e2902d3c89143bd0d6ea9d405a10, type: 2}

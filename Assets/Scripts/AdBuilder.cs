@@ -2,7 +2,9 @@ using UnityEngine;
 
 public abstract class AdBuilder : MonoBehaviour
 {
-    public abstract void BuildTitleIcon(Ad targetAd);
-    public abstract void BuildActionIcon(Ad targetAd);
-    public abstract void BuildConfirmAction(Ad targetAd);
+    public abstract void Randomize();
+    public abstract void BuildAdTimer(Ad targetAd);
+    public abstract void BuildIcon(Ad targetAd);
+    //public abstract void BuildActionIcon(Ad targetAd);
+    public abstract void BuildAdButtonActions(Ad targetAd);
 }

@@ -1,13 +1,7 @@
 using UnityEngine;
-using UnityEngine.UI;
 
-[CreateAssetMenu(fileName = "AdAction", menuName = "Ad/AdAction")]
-public class AdAction : ScriptableObject
+public abstract class AdAction : ScriptableObject
 {
-    [SerializeField] private Image icon;
-    //[SerializeField] private AdActionType type;
-    [SerializeField] private ConfirmAction confirmAction;
-    public Sprite AdActionIcon => icon.sprite;
-    //public AdActionType AdActionEnum => type;
-    public ConfirmAction AdConfirmAction => confirmAction;
+    public abstract void UpdateViewCount(double viewValue);
+    public abstract void UpdateLikeCount(double likeValue);
 }

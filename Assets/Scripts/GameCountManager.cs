@@ -6,6 +6,7 @@ public class GameCountManager : MonoBehaviour
     [SerializeField] private PerformanceUpdater likeUpdater;
     [SerializeField] private GameTimeUpdater gameTimeUpdater;
     [SerializeField] private BalanceUpdater balanceUpdater;
+    [SerializeField] private HealthUpdater healthUpdater;
     public static GameCountManager Instance {get; private set;}
     private void Awake()
     {
@@ -41,5 +42,10 @@ public class GameCountManager : MonoBehaviour
     {
         //Debug.Log("Update balance called!" + amount);
         balanceUpdater.UpdateBalanceCount(amount);
+    }
+
+    public void UpdateHealthCount(double amount)
+    {
+        healthUpdater.UpdateHealth(amount);
     }
 }

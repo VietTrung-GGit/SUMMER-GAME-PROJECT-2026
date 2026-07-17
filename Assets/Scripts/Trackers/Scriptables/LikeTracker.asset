@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71eb34fba72c9c54198e9163953caedb, type: 3}
   m_Name: LikeTracker
   m_EditorClassIdentifier: Assembly-CSharp::StatTracker
-  statCount: 0
-  startStatCount: 0
+  statCount: 78404.90463754548
+  startStatCount: 5000
   maxStatCount: 999999999999
+  minStatCount: 0

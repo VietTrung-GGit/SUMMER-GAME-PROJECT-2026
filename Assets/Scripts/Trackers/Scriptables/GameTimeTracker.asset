@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a558e77e8bfb714293e83a93ad30d40, type: 3}
   m_Name: GameTimeTracker
   m_EditorClassIdentifier: Assembly-CSharp::TimeTracker
-  timeCount: -0.001779759768396616
-  startTimeCount: 60
-  maxTimeCount: 60
+  timeCount: 20
+  startTimeCount: 20
+  maxTimeCount: 20

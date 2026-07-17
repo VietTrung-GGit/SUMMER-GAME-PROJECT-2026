@@ -1,15 +1,29 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class AdTimer : MonoBehaviour
 {
-    [SerializeField] private float timeMax = 5.0f;
     [SerializeField] private Slider timerSlider;
+    private Action<double> timerExpiredAction = null;
+    private double actionParam;
+    private float timeMax = 1.0f;
     private float timeRemaining;
-    private void Awake()
+    public void SetMaxTime(float amount)
+    {
+        timeMax = amount;
+        timeRemaining = timeMax;
+        timerSlider.value = timeMax;
+    }
+    /*private void Awake()
     {
         timeRemaining = timeMax;
         timerSlider.value = timeMax;
+    }*/
+    public void SetTimerExpiredAction(Action<double> action, double amount)
+    {
+        timerExpiredAction = action;
+        actionParam = amount;
     }
     private void Update()
     {
@@ -27,11 +41,16 @@ public class AdTimer : MonoBehaviour
 
     private void OnTimerExpire()
     {
+        if (timerExpiredAction != null)
+        {
+            timerExpiredAction?.Invoke(actionParam);
+        }
         gameObject.SetActive(false);
     }
 
     private void OnDisable()
     {
         timeRemaining = timeMax;
+        timerSlider.value = timeMax;
     }
 }
