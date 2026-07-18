@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StaticAdItem
   icon: {fileID: 21300000, guid: 01674fb4c0e0ea24a8b415d7fa2fb6b5, type: 3}
   value: 0
-  lifeTime: 1
+  lifeTime: 2
   adMetadata: {fileID: 0}
   viewValue: 0
   likeValue: 0
