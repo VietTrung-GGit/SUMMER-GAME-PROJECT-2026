@@ -7,16 +7,16 @@ public class IncreaseBalanceAction : AdExecuteAction
         //balanceTracker.StatCount += amount;
         //viewTracker.StatCount -= amount;
         //balanceUpdater.UpdateBalanceCount(amount);
-        GameCountManager.Instance.UpdateBalanceCount(amount);
+        CashModeCountManager.Instance.UpdateBalanceCount(amount);
     }
 
     public override void UpdateViewCount(double viewValue)
     {
-        GameCountManager.Instance.UpdateViewCount(-viewValue);
+        BaseGameCountManager.Instance.UpdateViewCount(-viewValue);
     }
 
     public override void UpdateLikeCount(double likeValue)
     {
-        GameCountManager.Instance.UpdateLikeCount(-likeValue);
+        BaseGameCountManager.Instance.UpdateLikeCount(-likeValue);
     }
 }

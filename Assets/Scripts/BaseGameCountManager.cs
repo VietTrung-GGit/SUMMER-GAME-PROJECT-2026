@@ -1,13 +1,13 @@
 using UnityEngine;
 
-public class GameCountManager : MonoBehaviour
+public class BaseGameCountManager : MonoBehaviour
 {
     [SerializeField] private PerformanceUpdater viewUpdater;
     [SerializeField] private PerformanceUpdater likeUpdater;
     [SerializeField] private GameTimeUpdater gameTimeUpdater;
-    [SerializeField] private BalanceUpdater balanceUpdater;
+    //[SerializeField] private BalanceUpdater balanceUpdater;
     [SerializeField] private HealthUpdater healthUpdater;
-    public static GameCountManager Instance {get; private set;}
+    public static BaseGameCountManager Instance {get; private set;}
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -38,11 +38,11 @@ public class GameCountManager : MonoBehaviour
         gameTimeUpdater.UpdateGameTime(amount);
     }
 
-    public void UpdateBalanceCount(double amount)
+    /*public void UpdateBalanceCount(double amount)
     {
         //Debug.Log("Update balance called!" + amount);
         balanceUpdater.UpdateBalanceCount(amount);
-    }
+    }*/
 
     public void UpdateHealthCount(double amount)
     {

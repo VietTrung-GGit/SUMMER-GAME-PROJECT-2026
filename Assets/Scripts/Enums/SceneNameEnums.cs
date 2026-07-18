@@ -1,0 +1,4 @@
+public enum SceneNameEnum
+{
+    GameScene
+}

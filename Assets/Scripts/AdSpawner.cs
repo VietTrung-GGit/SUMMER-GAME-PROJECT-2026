@@ -13,12 +13,11 @@ public class AdSpawner : MonoBehaviour
     [SerializeField] private StatTracker speedModifierTracker;
     private float spawnTimeRemaining;
     private float currentMaxSpawnInterval;
-    private float screenWidth;
-    private float screenHeight;
     //private const float SPEED_UP_VALUE = 0.75f;
     private const int MAX_POOL_SIZE = 50;
-    private const float MIN_WIDTH_SAFE_SPAWN_SPACE = 80.0f;
-    private const float MIN_HEIGHT_SAFE_SPAWN_SPACE = 45.0f;
+    /*private const float MIN_WIDTH_SAFE_SPAWN_SPACE = 80.0f;
+    private const float MIN_HEIGHT_SAFE_SPAWN_SPACE = 45.0f;*/
+    private const float SAFE_SPAWN_SPACE_PERCENTAGE = 0.75f;
     //Ensure type safety and prevent lagging
     private Transform[] adPool = new Transform[MAX_POOL_SIZE];
     private const string GOOD_AD_KEYWORD = "GoodAd";
@@ -52,8 +51,6 @@ public class AdSpawner : MonoBehaviour
         }
         currentMaxSpawnInterval  = baseMaxSpawnInterval;
         spawnTimeRemaining = currentMaxSpawnInterval;
-        screenWidth = Screen.width;
-        screenHeight = Screen.height;
     }
 
     private void OnEnable()
@@ -123,7 +120,7 @@ public class AdSpawner : MonoBehaviour
             targetAdTransform.gameObject.SetActive(true);
             targetAdTransform.SetAsLastSibling();
             RectTransform adRectTransform = targetAd.gameObject.GetComponent<RectTransform>();
-            Vector2 randomPosition = new Vector2(UnityEngine.Random.Range(-screenWidth/2 + MIN_WIDTH_SAFE_SPAWN_SPACE, screenWidth/2 - MIN_WIDTH_SAFE_SPAWN_SPACE), UnityEngine.Random.Range(-screenHeight/2 + MIN_HEIGHT_SAFE_SPAWN_SPACE, screenHeight/2 - MIN_HEIGHT_SAFE_SPAWN_SPACE));
+            Vector2 randomPosition = new Vector2(UnityEngine.Random.Range(-Screen.width/2 * SAFE_SPAWN_SPACE_PERCENTAGE, Screen.width/2 * SAFE_SPAWN_SPACE_PERCENTAGE), UnityEngine.Random.Range(-Screen.height/2 * SAFE_SPAWN_SPACE_PERCENTAGE, Screen.height/2 * SAFE_SPAWN_SPACE_PERCENTAGE));
             adRectTransform.anchoredPosition = randomPosition;
         }
     }

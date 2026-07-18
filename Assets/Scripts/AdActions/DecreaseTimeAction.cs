@@ -8,15 +8,15 @@ public class DecreaseTimeAction : AdExecuteAction
         //viewTracker.StatCount -= amount;
         //gameTimeTracker.TimeCount -= amount;
         //gameTimerUpdater.UpdateGameTime(-amount);
-        GameCountManager.Instance.UpdateGameTimeCount(-amount);
+        BaseGameCountManager.Instance.UpdateGameTimeCount(-amount);
     }
     public override void UpdateViewCount(double viewValue)
     {
-        GameCountManager.Instance.UpdateViewCount(-viewValue);
+        BaseGameCountManager.Instance.UpdateViewCount(-viewValue);
     }
 
     public override void UpdateLikeCount(double likeValue)
     {
-        GameCountManager.Instance.UpdateLikeCount(-likeValue);
+        BaseGameCountManager.Instance.UpdateLikeCount(-likeValue);
     }
 }

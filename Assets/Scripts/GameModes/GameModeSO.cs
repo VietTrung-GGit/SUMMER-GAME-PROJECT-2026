@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewGameMode", menuName = "CustomGame/GameMode")]
+[CreateAssetMenu(fileName = "New GameMode", menuName = "CustomGame/GameMode")]
 public class GameModeSO : ScriptableObject
 {
     [SerializeField] private string gameModeName;
@@ -8,4 +8,5 @@ public class GameModeSO : ScriptableObject
     //[SerializeField] private UITargetZone targetZone;
     [SerializeField] private Sprite icon;
     [SerializeField] private GameModeRuntime gameModePrefab;
+    public GameModeRuntime GameModePrefab => gameModePrefab;
 }
