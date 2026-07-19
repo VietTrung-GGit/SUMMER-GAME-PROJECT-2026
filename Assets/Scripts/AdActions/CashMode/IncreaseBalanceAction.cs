@@ -1,5 +1,5 @@
 using UnityEngine;
-[CreateAssetMenu(fileName = "IncreaseBalance", menuName = "AdButtonActions/IncreaseBalance")]
+[CreateAssetMenu(fileName = "IncreaseBalance", menuName = "AdActions/IncreaseBalance")]
 public class IncreaseBalanceAction : AdExecuteAction
 {
     public override void ExecuteAction(double amount)

@@ -1,5 +1,5 @@
 using UnityEngine;
-[CreateAssetMenu(fileName = "CorrectCloseAd", menuName = "AdButtonActions/CorrectCloseAd")]
+[CreateAssetMenu(fileName = "CorrectCloseAd", menuName = "AdActions/CorrectCloseAd")]
 public class CorrectCloseAdAction : AdAction
 {
     public override void UpdateViewCount(double viewValue)

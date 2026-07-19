@@ -6,10 +6,7 @@ public class AdSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject gameCanvas;
     [SerializeField] private float baseMaxSpawnInterval = 1.0f;
-    [SerializeField] private AdBuilder goodAdBuilder;
-    [SerializeField] private AdBuilder badAdBuilder;
-    [SerializeField] private AdBuilder modifierAdBuilder;
-    //[SerializeField] private TimeTracker gameTimeTracker;
+    [SerializeField] private AdBuilder adBuilder;
     [SerializeField] private StatTracker speedModifierTracker;
     private float spawnTimeRemaining;
     private float currentMaxSpawnInterval;
@@ -20,21 +17,21 @@ public class AdSpawner : MonoBehaviour
     private const float SAFE_SPAWN_SPACE_PERCENTAGE = 0.75f;
     //Ensure type safety and prevent lagging
     private Transform[] adPool = new Transform[MAX_POOL_SIZE];
-    private const string GOOD_AD_KEYWORD = "GoodAd";
+    /*private const string GOOD_AD_KEYWORD = "GoodAd";
     private const string BAD_AD_KEYWORD = "BadAd";
     private const string MODIFIER_AD_KEYWORD = "ModifierAd";
-    private const string BLOCKING_AD_KEYWORD = "BlockingAd";
+    private const string BLOCKING_AD_KEYWORD = "BlockingAd";*/
     /*private readonly Dictionary<string, float> adWeightList = new Dictionary<string, float>()
     {
         {MODIFIER_AD_KEYWORD, 0.1f},
         {BAD_AD_KEYWORD, 0.3f},
         {GOOD_AD_KEYWORD, 0.6f},
     };*/
-    private readonly Dictionary<string, float> adWeightList = new Dictionary<string, float>()
+    /*private readonly Dictionary<string, float> adWeightList = new Dictionary<string, float>()
     {
         {GOOD_AD_KEYWORD, 0.1f},
         {BAD_AD_KEYWORD, 0.9f}
-    };
+    };*/
 
     private void Awake()
     {
@@ -94,10 +91,10 @@ public class AdSpawner : MonoBehaviour
 
         if (targetAdTransform)
         {
-            float randomFloat = UnityEngine.Random.Range(0.0f, 1.0f);
-            float cumulativeProbability = 0.0f;
+            /*float randomFloat = UnityEngine.Random.Range(0.0f, 1.0f);
+            float cumulativeProbability = 0.0f;*/
             Ad targetAd = targetAdTransform.gameObject.GetComponent<Ad>();
-            foreach (string key in adWeightList.Keys)
+            /*foreach (string key in adWeightList.Keys)
             {
                 cumulativeProbability += adWeightList[key];
                 if (cumulativeProbability >= randomFloat)
@@ -116,7 +113,8 @@ public class AdSpawner : MonoBehaviour
                     }
                     break;
                 }
-            }
+            }*/
+            ConstructAd(adBuilder, targetAd);
             targetAdTransform.gameObject.SetActive(true);
             targetAdTransform.SetAsLastSibling();
             RectTransform adRectTransform = targetAd.gameObject.GetComponent<RectTransform>();

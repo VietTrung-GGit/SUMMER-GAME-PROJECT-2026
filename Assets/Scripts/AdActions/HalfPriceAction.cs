@@ -1,6 +1,6 @@
 using UnityEngine;
 //DISCARDED
-[CreateAssetMenu(fileName = "HalfPrice", menuName = "AdButtonActions/HalfPrice")]
+[CreateAssetMenu(fileName = "HalfPrice", menuName = "AdActions/HalfPrice")]
 public class HalfPriceAction : ModifierConfirmAction
 {
     public override void ExecuteAction(double amount)

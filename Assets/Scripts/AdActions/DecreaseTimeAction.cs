@@ -1,6 +1,6 @@
 using UnityEngine;
 //DISCARDED
-[CreateAssetMenu(fileName = "DecreaseTime", menuName = "AdButtonActions/DecreaseTime")]
+[CreateAssetMenu(fileName = "DecreaseTime", menuName = "AdActions/DecreaseTime")]
 public class DecreaseTimeAction : AdExecuteAction
 {
     public override void ExecuteAction(double amount)
