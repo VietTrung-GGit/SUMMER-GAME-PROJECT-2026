@@ -7338,6 +7338,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 111d038666885c145b77983f6696138d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameModeLoader
+  canvasZoneRegistry: {fileID: 1949673127}
+  adBuilder: {fileID: 1625101333}
 --- !u!4 &438898165
 Transform:
   m_ObjectHideFlags: 0

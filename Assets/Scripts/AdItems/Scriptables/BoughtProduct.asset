@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: BoughtProduct
   m_EditorClassIdentifier: Assembly-CSharp::DynamicAdItem
   icon: {fileID: 0}
-  value: 0
-  adAction: {fileID: 0}
-  viewValue: 0
-  likeValue: 0
-  priceModifierTracker: {fileID: 0}
+  value: 10000
+  lifeTime: 5
+  adMetadata: {fileID: 11400000, guid: ade8f0672c7c7dc4eb7875ebab42d7b1, type: 2}
+  viewValue: 10000
+  likeValue: 2500
+  modifierTracker: {fileID: 11400000, guid: 931577bbb02607a47ac6a9c0594d34cd, type: 2}

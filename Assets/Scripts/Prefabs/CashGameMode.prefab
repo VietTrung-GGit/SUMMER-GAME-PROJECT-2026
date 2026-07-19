@@ -434,6 +434,18 @@ MonoBehaviour:
   - {fileID: 6845440845674958903}
   UIChildrenTargetZones: 0100000000000000
   IsActiveUIChildren: 0100
+  adItemList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  adWeightList:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
 --- !u!1 &3734079134083295134
 GameObject:
   m_ObjectHideFlags: 0
