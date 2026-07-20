@@ -16,5 +16,5 @@ MonoBehaviour:
   value: 5
   lifeTime: 3
   adMetadata: {fileID: 11400000, guid: 76d39a686665fc54884585c2ddfb5973, type: 2}
-  viewValue: 1000
-  likeValue: 500
+  viewValue: 5000
+  likeValue: 1000

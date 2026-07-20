@@ -435,17 +435,15 @@ MonoBehaviour:
   UIChildrenTargetZones: 0100000000000000
   IsActiveUIChildren: 0100
   adItemList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 7f8c883bf93ecbe4e8b35dff3bbb3ce7, type: 2}
+  - {fileID: 11400000, guid: 94a45d4ca299f1d4cb2c784bc83fddf7, type: 2}
+  - {fileID: 11400000, guid: 63a843bb3f240534fa98e898d6fbdc9f, type: 2}
+  - {fileID: 11400000, guid: defe83ea1cd87dd418301a912c0d02e7, type: 2}
   adWeightList:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
+  - 0.15
+  - 0.25
+  - 0.3
+  - 0.3
 --- !u!1 &3734079134083295134
 GameObject:
   m_ObjectHideFlags: 0

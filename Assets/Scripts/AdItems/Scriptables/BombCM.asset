@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83d412a52e7a9464e87608164d7a5b35, type: 3}
+  m_Name: BombCM
+  m_EditorClassIdentifier: Assembly-CSharp::DynamicAdItem
+  icon: {fileID: 0}
+  value: 5
+  lifeTime: 5
+  adMetadata: {fileID: 11400000, guid: 6d75a8683231e6040a878517b3ef739f, type: 2}
+  viewValue: 1000
+  likeValue: 500
+  modifierTracker: {fileID: 11400000, guid: 931577bbb02607a47ac6a9c0594d34cd, type: 2}

@@ -9,16 +9,18 @@ public class AdBuilder : MonoBehaviour
 
     public void SetUpAdItemDataSet(List<AdItem> newList, List<float> newWeightList)
     {
-        if (newList.Count > 0)
+        if (adItemPool.Count == 0)
         {
-            adItemPool.Clear();
             adItemPool.AddRange(newList);
-        }
-
-        if (newWeightList.Count > 0)
-        {
-            adWeightList.Clear();
             adWeightList.AddRange(newWeightList);
+        }
+        else
+        {
+            MyExtensions.MergeSortedWeightedLists(adItemPool, adWeightList, newList, newWeightList, out List<AdItem> newMergedList, out List<float> newMergedWeightList);
+            adItemPool.Clear();
+            adWeightList.Clear();
+            adItemPool.AddRange(newMergedList);
+            adWeightList.AddRange(newMergedWeightList);
         }
     }
     public void Randomize()
@@ -39,16 +41,29 @@ public class AdBuilder : MonoBehaviour
 
     public void BuildAdTimer(Ad targetAd)
     {
+        if (adItemPool.Count == 0)
+        {
+            return;
+        }
         AdExecuteAction targetAdTimerAction = adItemPool[targetItemIndex].AdItemMetadata? adItemPool[targetItemIndex].AdItemMetadata.AdTimerAction : null;
         targetAd.SetAdTimer(adItemPool[targetItemIndex].AdLifetime, targetAdTimerAction? targetAdTimerAction.ExecuteAction : null, adItemPool[targetItemIndex].AdItemValue);
     }
     public void BuildIcon(Ad targetAd)
     {
+        if (adItemPool.Count == 0)
+        {
+            return;
+        }
         targetAd.SetTitleIcon(adItemPool[targetItemIndex].AdItemIcon);
     }
 
     public void BuildAdButtonActions(Ad targetAd)
     {
+        if (adItemPool.Count == 0)
+        {
+            return;
+        }
+
         if (adItemPool[targetItemIndex].AdItemMetadata)
         {
             AdExecuteAction targetConfirmAction = adItemPool[targetItemIndex].AdItemMetadata.AdConfirmAction;
