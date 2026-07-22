@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3470aa088bb083148abb44eae09314e4, type: 3}
-  m_Name: BaseMode
+  m_Name: ExplosiveMode
   m_EditorClassIdentifier: Assembly-CSharp::GameModeSO
-  gameModeName: Base Mode
-  gameModeDescription: Regular ads.
+  gameModeName: Explosive Mode
+  gameModeDescription: More explosives with controls to watch out for. Look after
+    the number pads!
   icon: {fileID: 0}
-  gameModePrefab: {fileID: 4904237918269199567, guid: 6b1425e0c1de86145b977c21adf8ccc6, type: 3}
+  gameModePrefab: {fileID: 3013309875114438331, guid: 01da18496a1b9fa4680ce54f4d3a7700, type: 3}

@@ -1286,7 +1286,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &64072539
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7014,7 +7014,7 @@ GameObject:
   m_Component:
   - component: {fileID: 432379403}
   m_Layer: 0
-  m_Name: BaseGame
+  m_Name: MainUpdaters
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7478,6 +7478,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameModeLoader
   canvasZoneRegistry: {fileID: 1949673127}
   adBuilder: {fileID: 1625101333}
+  adSpawner: {fileID: 2061924091}
 --- !u!4 &438898165
 Transform:
   m_ObjectHideFlags: 0
@@ -35475,7 +35476,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2061924091
 MonoBehaviour:
   m_ObjectHideFlags: 0

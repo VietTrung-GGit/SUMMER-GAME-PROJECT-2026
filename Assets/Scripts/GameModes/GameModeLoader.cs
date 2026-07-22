@@ -1,8 +1,10 @@
+using System.Collections.Generic;
 using UnityEngine;
 public class GameModeLoader : MonoBehaviour
 {
     [SerializeField] private CanvasZoneRegistry canvasZoneRegistry;
     [SerializeField] private AdBuilder adBuilder;
+    [SerializeField] private AdSpawner adSpawner;
     public static GameModeLoader Instance {get; private set;}
     private void Awake()
     {
@@ -28,8 +30,13 @@ public class GameModeLoader : MonoBehaviour
         return canvasZoneRegistry.GetTargetUIContainer(zone);
     }
 
-    public AdBuilder GetTargetAdBuilder()
+    public void SetUpAdBuilder(List<AdItem> adItemList, List<float> adWeightList)
     {
-        return adBuilder;
+        adBuilder.SetUpAdItemDataSet(adItemList, adWeightList);
+    }
+
+    public void ActivateAdSpawner()
+    {
+        adSpawner.gameObject.SetActive(true);
     }
 }

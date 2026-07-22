@@ -18,7 +18,7 @@ public class UIOverdraftModifier : MonoBehaviour
     {
         overdraftModifierTracker.OnStatCountChanged += UpdateTextDisplay;
         overdraftModTimeTracker.OnTimeCountChanged += UpdateTimerTexture;
-        modifierText.text = "x" + Math.Floor(overdraftModifierTracker.StatCount).ToString();
+        modifierText.SetText("x" + Math.Floor(overdraftModifierTracker.StatCount).ToString());
     }
     private void OnDisable()
     {
@@ -34,6 +34,6 @@ public class UIOverdraftModifier : MonoBehaviour
 
     private void UpdateTextDisplay(double amount)
     {
-        modifierText.text = "x" + Math.Floor(amount).ToString();
+        modifierText.SetText("x" + Math.Floor(amount).ToString());
     }
 }

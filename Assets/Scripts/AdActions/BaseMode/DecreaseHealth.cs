@@ -4,15 +4,15 @@ public class DecreaseHealthAction : AdExecuteAction
 {
     public override void ExecuteAction(double amount)
     {
-        BaseGameCountManager.Instance.UpdateHealthCount(-amount);
+        GameCountManager.Instance.UpdateHealthCount(-amount);
     }
     public override void UpdateViewCount(double viewValue)
     {
-        BaseGameCountManager.Instance.UpdateViewCount(viewValue);
+        GameCountManager.Instance.UpdateViewCount(viewValue);
     }
 
     public override void UpdateLikeCount(double likeValue)
     {
-        BaseGameCountManager.Instance.UpdateLikeCount(likeValue);
+        GameCountManager.Instance.UpdateLikeCount(likeValue);
     }
 }

@@ -1,13 +1,13 @@
 using UnityEngine;
 
-public class BaseGameCountManager : MonoBehaviour
+public class GameCountManager : MonoBehaviour
 {
     [SerializeField] private PerformanceUpdater viewUpdater;
     [SerializeField] private PerformanceUpdater likeUpdater;
     [SerializeField] private GameTimeUpdater gameTimeUpdater;
     //[SerializeField] private BalanceUpdater balanceUpdater;
     [SerializeField] private HealthUpdater healthUpdater;
-    public static BaseGameCountManager Instance {get; private set;}
+    public static GameCountManager Instance {get; private set;}
     private void Awake()
     {
         if (Instance != null && Instance != this)

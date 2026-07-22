@@ -1215,7 +1215,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Explosive Mode
+  m_Text: <color=yellow>Explosive Mode</color>
 --- !u!222 &1468135175
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1679,7 +1679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff0d96250d9ef74e8bb0d05f240904a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameModeToggle
-  gameModeSO: {fileID: 11400000, guid: 0ed09c0f40e774647a77be6e0830a1de, type: 2}
+  gameModeSO: {fileID: 11400000, guid: d88c0fc1bc9e1a54a873de5371d31bf4, type: 2}
 --- !u!114 &2080047666
 MonoBehaviour:
   m_ObjectHideFlags: 0

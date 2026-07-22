@@ -1,14 +1,8 @@
-using System.Collections.Generic;
 using UnityEngine;
-public class BaseMode : GameModeRuntime
+public class ExplosiveMode : GameModeRuntime
 {
-    [SerializeField] private List<AdItem> adItemList;
-    [SerializeField] private List<float> adWeightList;
-
     public override void InitializeGameMode()
     {
-        GameModeLoader.Instance.SetUpAdBuilder(adItemList, adWeightList);
-        GameModeLoader.Instance.ActivateAdSpawner();
 
         int index = 0;
         foreach (RectTransform child in CustomModeUIChildren)

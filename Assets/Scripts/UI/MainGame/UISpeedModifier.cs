@@ -34,7 +34,7 @@ public class UISpeedModifier : MonoBehaviour
         {
             modifierText.text = "x" + Math.Round(speedModifierTracker.StatCount,2).ToString();
         }*/
-        modifierText.text = "x" + Math.Round(speedModifierTracker.StatCount,2).ToString();
+        modifierText.SetText("x" + Math.Round(speedModifierTracker.StatCount,2).ToString());
     }
     private void OnDisable()
     {
@@ -58,7 +58,7 @@ public class UISpeedModifier : MonoBehaviour
         }
         else
         {
-            modifierText.text = "x" + Math.Round(speedModifierTracker.StatCount,2).ToString();
+            modifierText.SetText("x" + Math.Round(speedModifierTracker.StatCount,2).ToString());
         }
         /*else if (speedModifierTracker.StatCount >= 1.0f)
         {

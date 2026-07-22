@@ -7,7 +7,8 @@ public class CashMode : GameModeRuntime
 
     public override void InitializeGameMode()
     {
-        GameModeLoader.Instance.GetTargetAdBuilder().SetUpAdItemDataSet(adItemList, adWeightList);
+        GameModeLoader.Instance.SetUpAdBuilder(adItemList, adWeightList);
+        GameModeLoader.Instance.ActivateAdSpawner();
 
         int index = 0;
         foreach (RectTransform child in CustomModeUIChildren)

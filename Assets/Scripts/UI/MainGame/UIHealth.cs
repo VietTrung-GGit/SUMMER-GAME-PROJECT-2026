@@ -17,7 +17,7 @@ public class UIHealth : MonoBehaviour
     {
         healthTracker.OnStatCountChanged += UpdateTextDisplay;
         healthTracker.OnStatCountChanged += UpdateHealthTexture;
-        healthText.text = Math.Floor(healthTracker.StatCount).ToString();
+        healthText.SetText(Math.Floor(healthTracker.StatCount).ToString());
     }
     private void OnDisable()
     {
@@ -33,6 +33,6 @@ public class UIHealth : MonoBehaviour
 
     private void UpdateTextDisplay(double amount)
     {
-        healthText.text = Math.Floor(amount).ToString();
+        healthText.SetText(Math.Floor(amount).ToString());
     }
 }

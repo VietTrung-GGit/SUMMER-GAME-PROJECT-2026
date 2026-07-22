@@ -30,7 +30,7 @@ public class UIBalanceText : MonoBehaviour
         string formattedText = FormatNumber(count);
         if (!String.Equals(formattedText, lastDisplayedString))
         {
-            balanceText.text = formattedText;
+            balanceText.SetText(formattedText);
             lastDisplayedString = formattedText;
         }
     }

@@ -31,7 +31,7 @@ public class UIPerformanceText : MonoBehaviour
         string formattedText = FormatNumber(count);
         if (!String.Equals(formattedText, lastDisplayedString))
         {
-            statCountText.text = formattedText;
+            statCountText.SetText(formattedText);
             lastDisplayedString = formattedText;
         }
     }

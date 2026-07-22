@@ -8,16 +8,16 @@ public class IncreaseTimeAction : AdExecuteAction
         //viewTracker.StatCount += amount;
         //gameTimeTracker.TimeCount += amount;
         //gameTimerUpdater.UpdateGameTime(amount);
-        BaseGameCountManager.Instance.UpdateGameTimeCount(amount);
+        GameCountManager.Instance.UpdateGameTimeCount(amount);
     }
 
     public override void UpdateViewCount(double viewValue)
     {
-        BaseGameCountManager.Instance.UpdateViewCount(viewValue);
+        GameCountManager.Instance.UpdateViewCount(viewValue);
     }
 
     public override void UpdateLikeCount(double likeValue)
     {
-        BaseGameCountManager.Instance.UpdateLikeCount(likeValue);
+        GameCountManager.Instance.UpdateLikeCount(likeValue);
     }
 }

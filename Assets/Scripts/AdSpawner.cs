@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AdSpawner : MonoBehaviour
@@ -16,7 +14,7 @@ public class AdSpawner : MonoBehaviour
     private const float MIN_HEIGHT_SAFE_SPAWN_SPACE = 45.0f;*/
     private const float SAFE_SPAWN_SPACE_PERCENTAGE = 0.75f;
     //Ensure type safety and prevent lagging
-    private Transform[] adPool = new Transform[MAX_POOL_SIZE];
+    private readonly Transform[] adPool = new Transform[MAX_POOL_SIZE];
     /*private const string GOOD_AD_KEYWORD = "GoodAd";
     private const string BAD_AD_KEYWORD = "BadAd";
     private const string MODIFIER_AD_KEYWORD = "ModifierAd";
