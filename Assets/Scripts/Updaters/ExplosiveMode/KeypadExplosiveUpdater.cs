@@ -19,7 +19,7 @@ public class KeypadExplosiveUpdater : MonoBehaviour
     public Action<int> OnNewKeypadSequence;
     public Action OnKeypadSequenceReset;
     public Action<int> OnCorrectDigitInput;
-    private bool isDetectingInput = false;
+    private bool isDetectingInput = true;
     //private int targetNumberSequence;
 
     private void OnEnable()
@@ -41,6 +41,11 @@ public class KeypadExplosiveUpdater : MonoBehaviour
     {
         currentMaxSequenceInterval = baseMaxSequenceInterval;
         newSequenceTimeRemaining = currentMaxSequenceInterval;
+    }
+
+    private void Start()
+    {
+        GenerateNewKeypadSequence();
     }
 
     private void Update()

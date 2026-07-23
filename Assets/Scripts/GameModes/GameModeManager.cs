@@ -33,6 +33,17 @@ public class GameModeManager : MonoBehaviour
         }
     }
 
+    public void UntoggleAllGameModes()
+    {
+        foreach (GameModeSO gameModeSO in activeGameModeDict.Keys)
+        {
+            if (activeGameModeDict[gameModeSO])
+            {
+                activeGameModeDict[gameModeSO] = false;
+            }
+        }
+    }
+
     public void ActivateGameModes()
     {
         foreach (GameModeSO gameModeSO in activeGameModeDict.Keys)

@@ -18,9 +18,9 @@ public class SliceListener : MonoBehaviour
 
             foreach (RaycastHit2D hit in hits)
             {
-                if (hit.collider.TryGetComponent<SlicedBomb>(out var bomb))
+                if (hit.collider.TryGetComponent<SlicedItem>(out var item))
                 {
-                    bomb.Slice(swipeStart, swipeEnd);
+                    item.Slice(swipeStart, swipeEnd);
                 }
             }
         }

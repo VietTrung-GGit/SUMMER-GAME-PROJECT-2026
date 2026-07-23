@@ -1,4 +1,6 @@
 public enum SceneNameEnum
 {
-    GameScene
+    Game,
+    Digitopolis,
+    Start
 }
